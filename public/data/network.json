@@ -1,0 +1,19 @@
+{
+  "eth0": {
+    "addresses": ["203.0.113.5/24"],
+    "autoneg": "true",
+    "duplex": "full",
+    "speed": "1000",
+    "stats": {
+      "rx_bps": "45201088",
+      "tx_bps": "2104560",
+      "rx_bytes": "1284567890",
+      "tx_bytes": "984561230",
+      "rx_packets": "945612",
+      "tx_packets": "456123",
+      "rx_errors": "0",
+      "tx_errors": "0"
+    },
+    "up": "true"
+  }
+}

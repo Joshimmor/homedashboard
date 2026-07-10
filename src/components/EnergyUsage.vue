@@ -1,7 +1,10 @@
 <template>
+   <div class="dashboard w-[50vw] h-[30vh] flex flex-col justify-center">
+    <h2>Energy Usage Monitoring</h2>
   <div class="w-[50vw] h-[30vh]">
     <Bar v-if="loaded" :data="chartData" :options="chartOptions" />
   </div>
+   </div>
 </template>
 
 <script>

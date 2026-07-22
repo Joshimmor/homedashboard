@@ -1,16 +1,15 @@
 <template>
-  <div class="dashboard w-[50vw] h-[30vh] flex flex-col justify-center">
+  <div class="dashboard  h-[30vh] flex flex-col justify-center">
     <h2>WAN Performance Monitoring</h2>
     <p>Status: {{ connectionStatus }}</p>
 
     <!-- Pass the new tickCounter prop here -->
-    <div class="chart-wrapper">
+    <div class="chart-wrapper w-full h-[22vh]">
       <NetworkChart
         :download-history="downloadHistory" 
         :upload-history="uploadHistory" 
         :labels="chartLabels" 
         :tick-counter="tickCounter"
-        class=""
       />
     </div>
   </div>
@@ -29,7 +28,7 @@ const chartLabels = ref([]);
 const tickCounter = ref(0); // Add this counter to trigger rendering updates
 
 let stopStream = null;
-const MAX_DATA_POINTS = 20;
+const MAX_DATA_POINTS = 50;
 
 onMounted(() => {
   stopStream = streamWanSpeeds(

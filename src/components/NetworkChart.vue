@@ -1,7 +1,6 @@
 <template>
-  <div class="chart-container h-[30vh]">
-    <!-- Bind the key to tickCounter instead of array length -->
-    <Line :data="chartData" :options="chartOptions" :key="props.tickCounter" />
+  <div class="chart-container w-full h-full">
+    <Line :data="chartData" :options="chartOptions" />
   </div>
 </template>
 
@@ -29,13 +28,13 @@ const props = defineProps({
 });
 
 const chartData = computed(() => ({
-  labels: toRaw(props.labels),
+  labels: [...props.labels],
   datasets: [
     {
       label: 'Download (Mbps)',
       backgroundColor: '#3b82f6',
       borderColor: '#3b82f6',
-      data: toRaw(props.downloadHistory),
+      data: [...props.downloadHistory],
       tension: 0.3,
       pointRadius: 0
     },
@@ -43,7 +42,7 @@ const chartData = computed(() => ({
       label: 'Upload (Mbps)',
       backgroundColor: '#10b981',
       borderColor: '#10b981',
-      data: toRaw(props.uploadHistory),
+      data: [...props.uploadHistory],
       tension: 0.3,
       pointRadius: 0
     }

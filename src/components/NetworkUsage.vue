@@ -1,10 +1,10 @@
 <template>
-  <div class="dashboard  h-[30vh] flex flex-col justify-center">
+  <div class="dashboard h-[50vh] md:h-[30vh] flex flex-col justify-center">
     <h2>WAN Performance Monitoring</h2>
     <p>Status: {{ connectionStatus }}</p>
 
     <!-- Pass the new tickCounter prop here -->
-    <div class="chart-wrapper w-full h-[22vh]">
+    <div class="chart-wrapper w-full h-[38vh] md:h-[22vh]">
       <NetworkChart
         :download-history="downloadHistory" 
         :upload-history="uploadHistory" 

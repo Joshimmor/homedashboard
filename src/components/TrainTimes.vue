@@ -62,24 +62,23 @@ export default defineComponent({
 
 
 <template>
-    <div class="px-10 py-3">
-        <h3 class="text-3xl text-left pb-4">85th St — Forest Parkway</h3>
-        <div class="w-full rounded-xl border border-white/10 bg-white/5 flex items-center justify-between px-6 py-4">
-            <div class="flex items-center gap-5">
+    <div class="px-4 md:px-10 py-3">
+        <h3 class="text-xl md:text-3xl text-left pb-4">85th St — Forest Parkway</h3>
+        <div class="w-full rounded-xl border border-white/10 bg-white/5 flex items-center justify-between px-4 md:px-6 py-4 gap-2">
+            <div class="flex items-center gap-2 md:gap-5 min-w-0">
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/f/f9/NYCS-bull-trans-J-Std.svg"
-                    class="w-12 h-12"
+                    class="w-8 h-8 md:w-12 md:h-12 shrink-0"
                 />
-                <div class="flex flex-col">
-                    <span class="text-xs font-semibold uppercase tracking-widest text-gray-400">Direction</span>
-                    <span class="text-2xl font-medium text-white">{{ trainDirection }}</span>
+                <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-semibold uppercase tracking-wider md:tracking-widest text-gray-400">Direction</span>
+                    <span class="text-lg md:text-2xl font-medium text-white truncate">{{ trainDirection }}</span>
                 </div>
             </div>
-            <div class="flex flex-col items-end">
-                <span class="text-xs font-semibold uppercase tracking-widest text-gray-400">Arriving in</span>
-                <span class="text-2xl font-mono font-medium text-white">{{ trainDistance }} <span class="text-base text-gray-400">mins</span></span>
+            <div class="flex flex-col items-end shrink-0">
+                <span class="text-xs font-semibold uppercase tracking-wider md:tracking-widest text-gray-400">Arriving in</span>
+                <span class="text-lg md:text-2xl font-mono font-medium text-white">{{ trainDistance }} <span class="text-sm md:text-base text-gray-400">mins</span></span>
             </div>
-  
         </div>
     </div>
 </template>

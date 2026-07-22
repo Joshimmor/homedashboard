@@ -1,7 +1,7 @@
 <template>
-   <div class="dashboard  h-[30vh] flex flex-col justify-center">
+   <div class="dashboard h-[50vh] md:h-[30vh] flex flex-col justify-center">
     <h2>Energy Usage Monitoring</h2>
-  <div class="w-full h-[30vh]">
+  <div class="w-full h-[42vh] md:h-[30vh]">
     <Bar v-if="loaded" :data="chartData" :options="chartOptions" />
   </div>
    </div>

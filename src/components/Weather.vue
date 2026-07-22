@@ -26,7 +26,7 @@ onMounted(async ()=>{
     let location = weather.location
     current.value = weather.current
     let timeNow = new Date().getHours() + 1
-    let limit = isMobile() ? 4 : 10
+    let limit = isMobile() ? 6 : 12
     let endTime = timeNow + limit > 24 ? 24 : timeNow + limit
     forecast.value = weather.forecast.forecastday[0].hour.slice(timeNow,endTime)
     // console.log(weather)

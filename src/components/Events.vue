@@ -7,8 +7,8 @@ const expandedIndex = ref(null)
 
 onMounted(async ()=>{
     const queriedEvent = await getEvents()
-    events.value = queriedEvent.sort((a,b)=> a.start.dateTime < b.start.dateTime)
-    console.log(events)
+    events.value = queriedEvent.sort((a, b) => new Date(a.start.dateTime) - new Date(b.start.dateTime))
+    //console.log(events)
 })
 </script>
 <template>
